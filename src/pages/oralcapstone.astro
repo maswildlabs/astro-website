@@ -1,0 +1,37 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Oral Capstone Presentation // Systems Defense">
+  <main style="background-color: #141414; min-height: 100vh; color: #ffffff; padding: 4rem 1.5rem; font-family: system-ui, sans-serif;">
+    <div style="max-width: 60rem; margin: 0 auto;">
+      
+      <div style="margin-bottom: 2rem;">
+        <nav style="font-family: monospace; font-size: 0.75rem; display: flex !important; gap: 0.5rem !important; align-items: center !important; color: #98BF92 !important; opacity: 1 !important; margin-bottom: 1rem;">
+          <a href="/" style="color: #98BF92 !important; text-decoration: none !important; opacity: 1 !important;">HOME</a>
+          <span style="color: #98BF92 !important; opacity: 1 !important;">/</span>
+          <span style="color: #98BF92 !important; text-transform: uppercase !important; font-weight: 600 !important; opacity: 1 !important;">[ORAL DEFENSE]</span>
+        </nav>
+        <h1 style="text-transform: uppercase; font-size: 2rem; font-weight: 700; margin: 0 0 0.5rem 0; letter-spacing: 0.05em; color: #ffffff;">Oral Capstone Presentation</h1>
+        <p style="font-size: 0.875rem; color: #98BF92; margin: 0; font-family: monospace; font-weight: 600;">Technical defense stream and comprehensive architecture walkthrough.</p>
+      </div>
+
+      {/* VIDEO MEDIA BLOCK */}
+      <div style="background-color: rgba(28, 28, 28, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0.75rem; padding: 1rem; margin-bottom: 2.5rem;">
+        <video controls style="width: 100%; border-radius: 0.5rem; aspect-ratio: 16/9; background-color: #000000;">
+          <source src="/videos/oralcapstone.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      {/* REFLECTION BLOCK */}
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 2rem;">
+        <h3 style="font-size: 1.25rem; font-weight: 600; color: #98BF92; margin-top: 0; margin-bottom: 1rem; font-family: monospace;">// Presentation Overview</h3>
+        <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem; line-height: 1.7; margin: 0;">
+          This architectural briefing details a complete infrastructure transformation: migrating a legacy, fragmented mixed-vendor network into a centralized, unified Software-Defined Network (SDN). The presentation details the evaluation frameworks, migration pipelines, and automated deployment protocols engineered to execute the transition with zero production downtime. Review the media controls above for the full technical breakdown.
+        </p>
+      </div>
+
+    </div>
+  </main>
+</SiteLayout>

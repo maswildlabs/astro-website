@@ -1,0 +1,29 @@
+---
+// src/pages/tools/security-audit.astro
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import * as markdownData from '../../content/tools/security-audit.md';
+const { Content } = markdownData;
+---
+
+<SiteLayout title="Más Wild Labs // Security Audit" description="Active perimeter vulnerability scanning.">
+  <main style="background-color: #141414; min-height: 100vh; color: #ffffff; padding: 4rem 1.5rem 6rem 1.5rem; position: relative; z-index: 40;">
+    <div style="max-width: 52rem; margin-left: auto; margin-right: auto;">
+      
+      <div style="font-family: monospace; font-size: 11px; color: #98BF92; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.05em;">
+        <a href="/" style="color: #98BF92; text-decoration: none; font-weight: bold; margin-right: 0.5rem;">[SYSTEM_CORE]</a> / 
+        <span style="color: rgba(255,255,255,0.4); margin-left: 0.5rem;">tools / security-audit</span>
+      </div>
+
+      <article class="prose prose-invert" style="line-height: 1.7; color: rgba(255,255,255,0.85);">
+        <Content />
+      </article>
+
+      <div style="margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+        <a href="/" style="display: inline-block; font-family: monospace; font-size: 12px; color: #141414; background-color: #98BF92; padding: 0.6rem 1.2rem; border-radius: 0.375rem; text-decoration: none; font-weight: 700;">
+          ← RETURN TO CORE MATRIX
+        </a>
+      </div>
+
+    </div>
+  </main>
+</SiteLayout>

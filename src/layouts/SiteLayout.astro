@@ -1,0 +1,170 @@
+---
+import { footerMeta } from '../data/site';
+import '../styles/global.css';
+
+interface Props {
+  description?: string;
+  title: string;
+}
+
+const { title, description = 'AEON Space Agency content archive.' } = Astro.props;
+
+// Safe structural fallbacks to protect against blank render compilation halts
+const copyrightText = footerMeta?.copyright || "© 2026 Más Wild Labs. All Rights Reserved.";
+const taglineText = footerMeta?.tagline || "SYSTEM INTEGRITY // ACTIVE";
+---
+
+<html lang="en" data-theme="dark" class="dark" style="background-color: #141414;">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" />
+    <title>{title}</title>
+
+    <style is:global>
+      /* Enforce Space Grotesk on all standard body text and elements using generic sans-serif inline styles */
+      html, body, sans-serif, [style*="font-family: sans-serif"] {
+        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      }
+
+      /* Unify Display layout headers */
+      h1, h2:not([style*="font-family: monospace"]), h3:not([style*="font-family: monospace"]) {
+        font-family: 'Space Grotesk', sans-serif !important;
+        font-weight: 700;
+      }
+
+      /* Lock down technical terminal strings to a high-fidelity monospace font stack */
+      code, pre, monospace, [style*="font-family: monospace"] {
+        font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+      }
+    </style>
+  </head>
+  <body class="font-body text-white antialiased" style="background-color: #141414;">
+    <div class="site-shell min-h-screen overflow-x-clip relative">
+      
+      <header 
+        class="relative z-50 border-b border-white/10 backdrop-blur-md w-full"
+        style="background-color: #121314;"
+      >
+        <div class="mx-auto max-w-7xl px-6 py-5 sm:px-8 lg:px-12 w-full relative">
+          
+          <div class="hidden sm:block absolute top-4 right-6 sm:right-8 lg:right-12 font-mono text-[9px] text-white/20 tracking-widest uppercase">
+            EST. 2024
+          </div>
+
+          <div class="hidden sm:flex items-center justify-center gap-16 md:gap-24 w-full font-display text-[11px] uppercase tracking-[0.24em] mt-2">
+            
+            <div class="w-24 text-right">
+              <a href="/resume" class="text-white/70 hover:text-[#98BF92] transition-colors duration-300 no-underline">
+                Resume
+              </a>
+            </div>
+
+            <div class="text-center flex flex-col justify-center items-center gap-2">
+              <a href="/" class="transition-opacity duration-300 hover:opacity-80 no-underline inline-block w-32 h-32 sm:w-40 sm:h-40">
+                <img 
+                  src="/brand/logo2.png" 
+                  alt="Más Wild Labs Logo" 
+                  class="w-full h-full object-contain"
+                  loading="eager"
+                />
+              </a>
+              <span class="text-[10px] font-mono tracking-[0.3em] text-white/50 uppercase select-none mt-2 whitespace-nowrap">
+                Diagnose, Fix, Test, Document
+              </span>
+            </div>
+
+            <div class="w-24 text-left">
+              <a href="/about" class="text-white/70 hover:text-[#98BF92] transition-colors duration-300 no-underline">
+                About
+              </a>
+            </div>
+
+          </div>
+
+          <div class="flex sm:hidden flex-col items-center gap-3 text-center font-display text-[10px] uppercase tracking-[0.24em]">
+            <div class="text-center flex flex-col justify-center items-center gap-1">
+              <a href="/" class="no-underline w-28 h-28">
+                <img 
+                  src="/brand/logo2.png" 
+                  alt="Más Wild Labs Logo" 
+                  class="w-full h-full object-contain"
+                  loading="eager"
+                />
+              </a>
+              <span class="text-[9px] font-mono tracking-[0.22em] text-white/40 uppercase select-none whitespace-nowrap">
+                Diagnose, Fix, Test, Document
+              </span>
+            </div>
+            <div class="flex justify-center items-center gap-8 mt-2">
+              <a href="/resume" class="text-white/70 hover:text-[#98BF92] no-underline">Resume</a>
+              <a href="/about" class="text-white/70 hover:text-[#98BF92] no-underline">About</a>
+            </div>
+          </div>
+
+        </div>
+      </header>
+      
+      <slot />
+      
+      <footer class="border-t border-white/10 py-12 text-center text-xs text-white/40 font-mono" style="background-color: #111111;">
+        <div class="mx-auto max-w-2xl px-6 mb-8">
+          <div class="bg-[#141414] border border-white/5 rounded-lg p-6 sm:p-8 text-left relative overflow-hidden group hover:border-[#98BF92]/30 transition-all duration-300">
+            
+            <div class="absolute top-4 right-4 flex items-center gap-1.5 text-[10px] tracking-widest text-white/20 select-none">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#98BF92] animate-pulse"></span>
+              SYS_LOGS: READY
+            </div>
+            
+            <h4 class="text-xs uppercase tracking-widest text-[#98BF92] mb-2 font-bold font-mono">Found a bug or layout error?</h4>
+            <p class="text-xs sm:text-sm text-white/50 leading-relaxed font-sans mb-6">
+              Help maintain system optimization. Submit any typos, broken responsive wrappers, or build pipeline bugs directly to the operator.
+            </p>
+            
+            <button 
+              id="copy-email-trigger"
+              class="w-full text-left bg-transparent border-0 p-0 cursor-pointer focus:outline-none group/btn block"
+              data-email="mas@maswildlabs.com"
+            >
+              <div class="font-mono text-base sm:text-lg text-white/80 tracking-wide transition-colors duration-200 group-hover/btn:text-[#98BF92]">
+                <span id="copy-status-indicator" class="text-white/30 mr-1 group-hover/btn:text-[#98BF92]">&gt;</span> 
+                contact: <span class="text-[#98BF92] font-bold underline decoration-white/10 group-hover/btn:decoration-[#98BF92]">mas@maswildlabs.com</span>
+              </div>
+            </button>
+
+          </div>
+        </div>
+
+        <p class="font-sans text-white/40 text-xs">{copyrightText}</p>
+        <p class="mt-2 text-[10px] tracking-wider text-white/20 uppercase">{taglineText}</p>
+      </footer>
+
+    </div>
+
+    <script is:inline>
+      document.getElementById('copy-email-trigger')?.addEventListener('click', function() {
+        const email = this.getAttribute('data-email');
+        const indicator = document.getElementById('copy-status-indicator');
+        
+        navigator.clipboard.writeText(email).then(() => {
+          if (indicator) {
+            const originalText = indicator.textContent;
+            indicator.textContent = '✓ copied //';
+            indicator.style.color = '#98BF92';
+            setTimeout(() => {
+              indicator.textContent = originalText;
+              indicator.style.color = '';
+            }, 2500);
+          }
+        }).catch(() => {
+          window.location.href = "mailto:" + email;
+        });
+      });
+    </script>
+  </body>
+</html>

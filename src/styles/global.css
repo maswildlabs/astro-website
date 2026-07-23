@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page-bg: #1A1A1A;
+  --color-dark-space: #1A1A1A;
+  --color-page-cream: #1A1A1A;
+  --color-navy-text: #C0C0C0;
+  --color-muted-navy: #C0C0C0;
+  --color-accent-blue: #98BF92;
+  --color-warm-gold: #98BF92;
+  --color-section-dark: #1A1A1A;
+  --color-deep-space-card: #1A1A1A;
+  --color-footer-bg: #1A1A1A;
+  --font-display: "Orbitron", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+}
+
+@keyframes star-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+:root,
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --shell-glow: rgba(152, 191, 146, 0.08);
+  --shell-bg-start: #1A1A1A;
+  --shell-bg-end: #1A1A1A;
+  --body-strong: #C0C0C0;
+  --body-muted: rgba(192, 192, 192, 0.72);
+  --body-soft: rgba(192, 192, 192, 0.62);
+  --line-subtle: rgba(152, 191, 146, 0.15);
+  --panel-tint: rgba(255, 255, 255, 0.03);
+  --panel-tint-strong: rgba(255, 255, 255, 0.04);
+  --panel-inverse: rgba(0, 0, 0, 0.22);
+  --hero-image-opacity: 0.45;
+  --hero-image-blend: screen;
+  --hero-utility-color: rgba(192, 192, 192, 0.6);
+  --overlay-hero-title: #C0C0C0;
+  --overlay-hero-copy: rgba(192, 192, 192, 0.76);
+  --overlay-feature-title: #C0C0C0;
+  --overlay-feature-copy: rgba(192, 192, 192, 0.76);
+  --overlay-feature-meta: rgba(192, 192, 192, 0.62);
+  --discovery-surface: #1A1A1A;
+  --discovery-overlay: linear-gradient(to bottom,#1A1A1A,rgba(26,26,26,0.55),#1A1A1A);
+  --discovery-title: #C0C0C0;
+  --discovery-copy: rgba(192,192,192,0.75);
+  --discovery-meta: rgba(192,192,192,0.56);
+  --discovery-chart-surface: rgba(0,0,0,0.2);
+  --discovery-axis: rgba(192,192,192,0.55);
+  --departure-surface: #1A1A1A;
+  --departure-title: #C0C0C0;
+  --departure-copy: rgba(192,192,192,0.62);
+  --departure-meta: rgba(192,192,192,0.5);
+  --departure-countdown-surface: rgba(0,0,0,0.25);
+}
+
+html[data-theme='light'] {
+  color-scheme: dark;
+  --color-page-bg: #1A1A1A;
+  --color-dark-space: #1A1A1A;
+  --color-page-cream: #1A1A1A;
+  --color-navy-text: #C0C0C0;
+  --color-muted-navy: #C0C0C0;
+  --color-section-dark: #1A1A1A;
+  --color-deep-space-card: #1A1A1A;
+  --color-footer-bg: #1A1A1A;
+  --shell-glow: rgba(152, 191, 146, 0.08);
+  --shell-bg-start: #1A1A1A;
+  --shell-bg-end: #1A1A1A;
+  --body-strong: #C0C0C0;
+  --body-muted: rgba(192, 192, 192, 0.72);
+  --body-soft: rgba(192, 192, 192, 0.62);
+  --line-subtle: rgba(152, 191, 146, 0.15);
+  --panel-tint: rgba(255, 255, 255, 0.03);
+  --panel-tint-strong: rgba(255, 255, 255, 0.04);
+  --panel-inverse: rgba(0, 0, 0, 0.22);
+  --hero-image-opacity: 0.45;
+  --hero-image-blend: screen;
+  --hero-utility-color: rgba(192, 192, 192, 0.6);
+  --overlay-hero-title: #C0C0C0;
+  --overlay-hero-copy: rgba(192, 192, 192, 0.76);
+  --overlay-feature-title: #C0C0C0;
+  --overlay-feature-copy: rgba(192, 192, 192, 0.76);
+  --overlay-feature-meta: rgba(192, 192, 192, 0.62);
+  --discovery-surface: #1A1A1A;
+  --discovery-overlay: linear-gradient(to bottom,#1A1A1A,rgba(26,26,26,0.55),#1A1A1A);
+  --discovery-title: #C0C0C0;
+  --discovery-copy: rgba(192,192,192,0.78);
+  --discovery-meta: rgba(192,192,192,0.62);
+  --discovery-chart-surface: rgba(0, 0, 0, 0.2);
+  --discovery-axis: rgba(192,192,192,0.62);
+  --departure-surface: #1A1A1A;
+  --departure-title: #C0C0C0;
+  --departure-copy: rgba(192,192,192,0.76);
+  --departure-meta: rgba(192,192,192,0.58);
+  --departure-countdown-surface: rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,48 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+
+// Pull all markdown files from the kstate directory to map them into cards
+const markdownFiles = import.meta.glob('../../content/kstate/*.md', { eager: true });
+const assignments = Object.entries(markdownFiles).map(([path, file]: [string, any]) => {
+  const slug = path.split('/').pop().replace(/\.md$/, '');
+  return {
+    slug,
+    title: file.frontmatter?.title || slug.replace(/-/g, ' '),
+    summary: file.frontmatter?.summary || 'Kansas State University course deliverable and technical documentation module.',
+    status: file.frontmatter?.status || 'Completed'
+  };
+});
+---
+
+<SiteLayout title="K-State Assignments // Coursework Repository">
+  <main style="background-color: #141414; min-height: 100vh; color: #ffffff; padding: 4rem 1.5rem; font-family: system-ui, sans-serif;">
+    <div style="max-width: 80rem; margin: 0 auto;">
+      
+      <nav style="font-family: monospace; font-size: 0.75rem; display: flex !important; gap: 0.5rem !important; align-items: center !important; color: #98BF92 !important; opacity: 1 !important; margin-bottom: 2rem;">
+        <a href="/" style="text-decoration: none !important; color: #98BF92 !important; opacity: 1 !important;">HOME</a>
+        <span style="color: #98BF92 !important; opacity: 1 !important;">/</span> 
+        <span style="color: #98BF92 !important; text-transform: uppercase !important; font-weight: 600 !important; opacity: 1 !important;">K-STATE COURSEWORK</span>
+      </nav>
+
+      <header style="margin-bottom: 3rem;">
+        <h1 style="font-size: 2.25rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">K-State Coursework</h1>
+        <p style="color: #98BF92; max-width: 40rem; font-size: 0.875rem; font-family: monospace; font-weight: 600; margin: 0;">Central repository for specialized operations logs, system migration proposals, and academic documentation tracks.</p>
+      </header>
+
+      <div style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        {assignments.map((doc) => (
+          /* FORCED ROUTE TO MATCH ROUTER: /kstate/ */
+          <a href={`/kstate/${doc.slug}`} style="display: flex; flex-direction: column; justify-content: space-between; border: 1px solid rgba(255,255,255,0.1); background-color: rgba(28,28,28,0.4); border-radius: 0.75rem; padding: 1.5rem; min-height: 200px; text-decoration: none; transition: border-color 0.3s;" onmouseover="this.style.borderColor='#98BF92'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+            <div>
+              <span style="display: inline-block; font-size: 9px; font-family: monospace; border: 1px solid rgba(152,191,146,0.3); background-color: rgba(152,191,146,0.1); color: #98BF92; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; margin-bottom: 1rem;">{doc.status}</span>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin: 0; text-transform: capitalize;">{doc.title}</h3>
+              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.5;">{doc.summary}</p>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 11px; font-family: monospace; color: #98BF92;">VIEW DOCUMENTATION →</div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </main>
+</SiteLayout>

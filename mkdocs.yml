@@ -1,0 +1,40 @@
+site_name: Mas Wild Labs
+
+theme:
+  name: material
+  logo: ""
+  font:
+    text: Roboto
+    code: JetBrains Mono
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Lab Infrastructure:
+    - Lab Environment Overview: portfolio/lab.md
+    - Core Network Topology: portfolio/network_infrastructure.md
+  - Technical Case Studies & Proposals:
+    - Network Modernization: portfolio/network-modernization.md
+    - Fleet Migration Architecture: "portfolio/Executive Proposal_Media Player Fleet Migration.md"
+    - Engineering QC Realignment: "portfolio/Project Overview_Engineering Documentation & Quality Control Realignment.md"
+  - Operational Guides & Updates:
+    - IAM Security Setup: "portfolio/Step-by-Step Setting Up Microsoft Authenticator.md"
+    - System Optimization Logs: "portfolio/Product Update_Enhancing Your Media Performance and Stability.md"
+  - Document Design Capstone:
+    - Portfolio Overview: "portfolio/Document Design Capstone/docdesign capstone-overview.md"
+    - "Mod 1: Brand Identity": "portfolio/Document Design Capstone/Module 1 Brand Identity Analysis.md"
+    - "Mod 2: CRAP Design Analysis": "portfolio/Document Design Capstone/Module 2 Applying CRAP Principles.md"
+    - "Mod 3: Professional Identity": "portfolio/Document Design Capstone/Module 3 Professional Identity.md"
+    - "Mod 4: Usability Evaluation": "portfolio/Document Design Capstone/Module 4 Usability Evaluation.md"
+    - Final Reflective Essay: "portfolio/Document Design Capstone/Reflective Essay.md"

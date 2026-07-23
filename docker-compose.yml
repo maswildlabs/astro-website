@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  portfolio-app:
+    build:
+      context: /opt/appdata/astro-portfolio
+      dockerfile: Dockerfile
+    container_name: portfolio-app
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "8000:4321"
+    volumes:
+      - /opt/appdata/astro-portfolio:/app
+      - /app/node_modules
+    restart: unless-stopped
+    

@@ -1,0 +1,128 @@
+---
+import { render } from 'astro:content';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getPageEntry } from '../lib/content';
+
+const entry = await getPageEntry('about');
+const { Content } = await render(entry);
+---
+
+<SiteLayout title={`${entry.data.title} | Más Wild Labs`}>
+  <main class="mx-auto max-w-5xl px-6 py-6 sm:px-8 mt-6">
+    <div class="prose prose-invert max-w-4xl mx-auto px-4 font-sans text-slate-300 antialiased leading-relaxed tracking-wide primitive-content">
+      
+      <div class="flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.24em] text-[#98BF92] mb-10">
+        <a href="/" class="text-[#98BF92] hover:text-white transition-colors duration-300 no-underline">Home</a>
+        <span class="text-white/20 select-none">/</span>
+        <span class="text-white/40 select-none">About</span>
+      </div>
+
+      <h1 class="text-4xl font-extrabold text-white mb-6 uppercase tracking-wider font-display" style="font-family: 'Orbitron', sans-serif;">
+        {entry.data.title}
+      </h1>
+      
+      <div class="markdown-body">
+        <Content />
+      </div>
+
+    </div>
+  </main>
+</SiteLayout>
+
+<style is:global>
+  /* UNIFORM TYPOGRAPHY SYSTEM FOR MARKDOWN ELEMENTS */
+  .markdown-body h2 {
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    margin-top: 2.5rem !important;
+    margin-bottom: 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.4rem;
+  }
+
+  .markdown-body h3 {
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #98BF92 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .markdown-body p, .markdown-body li {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.78) !important;
+    margin-top: 0.85rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  /* IMAGE LAYOUT CONTROLS */
+  .prose > p > img,
+  .prose > img {
+    width: 100% !important;
+    max-width: 600px !important;
+    height: auto !important;
+    max-height: 400px !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    margin: 2rem auto !important;
+    display: block !important;
+    border-radius: 0.5rem;
+  }
+
+  .prose hr {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    border-color: #334155 !important;
+  }
+
+  .markdown-body ul li {
+    margin-bottom: 0.5rem !important;
+    list-style-type: disc !important;
+  }
+
+  .markdown-body strong {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+  }
+
+  /* SIDE-BY-SIDE RESPONSIVE PHOTO GRID - CONSTRAINED AND CENTERED */
+  .derby-photo-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
+    margin: 2.5rem auto !important;
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .derby-photo-grid img {
+    flex: 1 1 50%;
+    max-width: 48% !important;
+    height: 340px !important;
+    object-fit: cover !important;
+    object-position: center 25% !important;
+    margin: 0 !important;
+    border-radius: 0.5rem;
+    border: 1px solid #334155;
+  }
+
+  @media (max-width: 640px) {
+    .derby-photo-grid {
+      flex-direction: column;
+      max-width: 100%;
+    }
+    .derby-photo-grid img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
+</style>

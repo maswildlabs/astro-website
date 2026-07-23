@@ -1,0 +1,88 @@
+---
+import { render } from 'astro:content';
+import SingletonPageLayout from '../layouts/SingletonPageLayout.astro';
+import { getPageEntry } from '../lib/content';
+
+const entry = await getPageEntry('resume');
+const { Content } = await render(entry);
+---
+
+<SingletonPageLayout
+  title={entry.data.title}
+  eyebrow={entry.data.eyebrow || "// RESUME"}
+  summary={entry.data.summary || ""}
+  image={entry.data.image}
+  highlights={entry.data.highlights || []}
+  hideHero={true}
+>
+  <div class="prose prose-invert max-w-4xl mx-auto mt-12 px-6 font-sans text-slate-300 antialiased leading-relaxed tracking-wide primitive-content">
+    
+    <div class="flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.24em] text-[#98BF92] mb-10">
+      <a href="/" class="text-[#98BF92] hover:text-white transition-colors duration-300 no-underline">Home</a>
+      <span class="text-white/20 select-none">/</span>
+      <span class="text-white/40 select-none">Resume</span>
+    </div>
+
+    <div class="mb-10 border-l-2 border-[#98BF92] pl-5 py-1">
+      <p class="text-xs font-mono tracking-[0.3em] text-[#98BF92] uppercase mb-1">{entry.data.eyebrow || "// SYSTEMS ARTIFACT"}</p>
+      <h1 class="text-4xl font-extrabold text-white tracking-wider uppercase m-0" style="font-family: 'Orbitron', sans-serif;">
+        {entry.data.title}
+      </h1>
+    </div>
+    
+    <div class="markdown-body">
+      <Content />
+    </div>
+  </div>
+</SingletonPageLayout>
+
+<style is:global>
+  .markdown-body h2 {
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+    margin-top: 3rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  .markdown-body h3 {
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #98BF92 !important;
+    margin-top: 2.25rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .markdown-body p, .markdown-body li {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+  .prose hr {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .markdown-body ul li {
+    margin-bottom: 1rem !important;
+    list-style-type: disc !important;
+  }
+  .markdown-body strong {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+  }
+  .markdown-body a {
+    color: #9cc298 !important;
+    text-decoration: underline !important;
+    transition: color 0.2s ease;
+  }
+  .markdown-body a:hover {
+    color: #bce3b8 !important;
+  }
+</style>
