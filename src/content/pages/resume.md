@@ -1,3 +1,7 @@
+---
+title: "Resume"
+description: "Stephanie R. Wilder - Professional Resume"
+
 # Stephanie R. Wilder
 **Fresno, CA 93726** | **559-304-9111** | [srwilder559@gmail.com](mailto:srwilder559@gmail.com)  
 [LinkedIn](#) | [GitHub](#) | [Portfolio (maswildlabs.com)](https://maswildlabs.com)
