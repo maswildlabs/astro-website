@@ -1,5 +1,15 @@
 ---
 title: "Resume"
+eyebrow: "Professional Experience"
+summary: "Technical Writer with a 15-year enterprise IT foundation specializing in software documentation."
+---
+
+# Stephanie R. Wilder
+**Fresno, CA 93726** | **559-304-9111** | [srwilder559@gmail.com](mailto:srwilder559@gmail.com)  
+[LinkedIn](#) | [GitHub](#) | [Portfolio (maswildlabs.com)](https://maswildlabs.com)
+
+---
+title: "Resume"
 description: "Stephanie R. Wilder - Professional Resume"
 
 # Stephanie R. Wilder
