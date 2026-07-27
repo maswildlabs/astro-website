@@ -1,3 +1,4 @@
+---
 title: "Resume"
 eyebrow: "Professional Experience"
 summary: "Technical Writer with a 15-year enterprise IT foundation specializing in software documentation."
