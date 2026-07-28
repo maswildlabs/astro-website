@@ -2,9 +2,21 @@
 title: "Resume"
 eyebrow: "Professional Experience"
 summary: "Technical Writer with a 15-year enterprise IT foundation specializing in software documentation."
-image: "/images/headshot.png"
-pdfUrl: "/assignments/resume.pdf"
 ---
+
+# Stephanie R. Wilder
+**Fresno, CA 93726** | **559-304-9111** | [srwilder559@gmail.com](mailto:srwilder559@gmail.com)  
+[LinkedIn](#) | [GitHub](#) | [Portfolio (maswildlabs.com)](https://maswildlabs.com)
+
+<div class="flex flex-col sm:flex-row items-center gap-6 my-8 p-4 bg-white/5 rounded-lg border border-white/10">
+  <img src="/images/headshot.png" alt="Stephanie R. Wilder" class="w-28 h-28 rounded-full object-cover border border-[#98BF92] m-0" />
+  <div>
+    <p class="text-sm text-slate-400 m-0">Need an offline copy for hiring or records?</p>
+    <a href="/assignments/resume.pdf" download class="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-[#98BF92] text-slate-900 font-mono text-xs uppercase tracking-wider font-bold rounded hover:bg-[#bce3b8] transition-colors duration-200 no-underline">
+      📥 Download PDF Resume
+    </a>
+  </div>
+</div>
 
 ## Professional Summary
 Technical Writer with a 15-year enterprise IT foundation specializing in software documentation, knowledge management, and process architecture. Expert at bridging documentation gaps, collaborating cross-functionally, and transforming complex legacy data into structured information ecosystems at a 60,000+ device scale.
