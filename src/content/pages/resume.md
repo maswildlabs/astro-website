@@ -12,7 +12,7 @@ summary: "Technical Writer with a 15-year enterprise IT foundation specializing 
   <img src="/images/headshot.png" alt="Stephanie R. Wilder" class="w-28 h-28 rounded-full object-cover border border-[#98BF92] m-0" />
   <div>
     <p class="text-sm text-slate-400 m-0">Need an offline copy for hiring or records?</p>
-    <a href="/assignments/resume.pdf" download class="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-[#98BF92] text-slate-900 font-mono text-xs uppercase tracking-wider font-bold rounded hover:bg-[#bce3b8] transition-colors duration-200 no-underline">
+    <a href="/assignments/resume.pdf" download class="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-[#98BF92] text-slate-900 font-mono text-xs uppercase tracking-wider font-bold rounded hover:bg-[#bce3b8] transition-colors duration-200 no-underline" style="color: #0f172a !important;">
       📥 Download PDF Resume
     </a>
   </div>
@@ -46,11 +46,16 @@ Technical Writer with a 15-year enterprise IT foundation specializing in softwar
 ## Education & Certifications
 
 ### University of Kansas - Salina | *Online*
-**Technical Writing Specialized Training** | *Expected Completion: 2026*
+**Technical Writer Specialized Training** | *Expected Completion: 2026*
+
+<img src="/images/kansas-badge.png" alt="University of Kansas Badge" class="h-16 my-3 rounded border border-white/10 object-contain block" />
+
 > **Distinction:** Document Design Capstone portfolio selected by the instructor to serve as the exemplary model for future curriculum students.
 
 ### Technical Writer HQ | *Online*
 **Certified Technical Writer** | *2026*
+
+<img src="/images/twhq-badge.png" alt="Technical Writer HQ Badge" class="h-16 my-3 rounded border border-white/10 object-contain block" />
 
 ### Fresno City College | *Fresno, CA*
 **Certificate of Achievement, Cybersecurity** | *2021 – 2022*
