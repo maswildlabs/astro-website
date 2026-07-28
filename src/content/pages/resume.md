@@ -48,11 +48,11 @@ Technical Writer with a 15-year enterprise IT foundation specializing in softwar
 ### University of Kansas - Salina | *Online*
 **Technical Writer Specialized Training** | *Expected Completion: 2026*
 
-<img src="/images/ku_seal.png" alt="University of Kansas Badge" class="h-16 my-3 rounded border border-white/10 object-contain block" />
+<img src="/images/ku_seal.png" alt="University of Kansas Badge" class="w-full max-w-[280px] my-4 rounded border border-white/10 object-contain block" />
 
 > **Distinction:** Document Design Capstone portfolio selected by the instructor to serve as the exemplary model for future curriculum students.
 
 ### Technical Writer HQ | *Online*
 **Certified Technical Writer** | *2026*
 
-<img src="/images/twhq_seal.png" alt="Technical Writer HQ Badge" class="h-16 my-3 rounded border border-white/10 object-contain block" />
+<img src="/images/twhq_seal.png" alt="Technical Writer HQ Badge" class="w-full max-w-[280px] my-4 rounded border border-white/10 object-contain block" />
